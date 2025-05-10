@@ -1,0 +1,68 @@
+Initialized native services in: /home/akshatgg/.gradle/native
+Initialized jansi services in: /home/akshatgg/.gradle/native
+The client will now receive all logging from the daemon (pid: 357481). The daemon log file: /home/akshatgg/.gradle/daemon/8.12/daemon-357481.out.log
+Starting 4th build in daemon [uptime: 8 mins 43.591 secs, performance: 99%, GC rate: 0.00/s, heap usage: 0% of 512 MiB, non-heap usage: 17% of 384 MiB]
+Using 16 worker leases.
+Now considering [/home/akshatgg/CERN_bot_connect4/starter-bot-project] as hierarchies to watch
+Watching the file system is configured to be enabled if available
+File system watching is active
+Starting Build
+Settings evaluated using settings file '/home/akshatgg/CERN_bot_connect4/starter-bot-project/settings.gradle'.
+Projects loaded. Root project using build file '/home/akshatgg/CERN_bot_connect4/starter-bot-project/build.gradle'.
+Included projects: [root project 'quantumconnect-starter']
+
+> Configure project :
+Evaluating root project 'quantumconnect-starter' using build file '/home/akshatgg/CERN_bot_connect4/starter-bot-project/build.gradle'.
+Resolved plugin [id: 'java']
+All projects evaluated.
+Task name matched 'clean'
+Task name matched 'build'
+Selected primary task 'clean' from project :
+Selected primary task 'build' from project :
+Tasks to be executed: [task ':clean', task ':compileJava', task ':processResources', task ':classes', task ':jar', task ':assemble', task ':compileTestJava', task ':processTestResources', task ':testClasses', task ':test', task ':check', task ':build']
+Tasks that were excluded: []
+Resolve mutations for :clean (Thread[#157,Execution worker,5,main]) started.
+:clean (Thread[#157,Execution worker,5,main]) started.
+destroyer locations for task group 0 (Thread[#158,Execution worker Thread 2,5,main]) started.
+
+> Task :clean
+Caching disabled for task ':clean' because:
+  Build cache is disabled
+Task ':clean' is not up-to-date because:
+  Task has not declared any outputs despite executing actions.
+Resolve mutations for :compileJava (Thread[#157,Execution worker,5,main]) started.
+:compileJava (Thread[#157,Execution worker,5,main]) started.
+
+> Task :compileJava FAILED
+Caching disabled for task ':compileJava' because:
+  Build cache is disabled
+Task ':compileJava' is not up-to-date because:
+  Task has failed previously.
+The input changes require a full rebuild for incremental task ':compileJava'.
+Compilation mode: in-process compilation
+Full recompilation is required because no incremental change information is available. This is usually caused by clean builds or changing compiler arguments.
+Compiling with toolchain '/usr/lib/jvm/java-21-openjdk-amd64'.
+Compiling with JDK Java compiler API.
+/home/akshatgg/CERN_bot_connect4/starter-bot-project/src/main/java/ch/qc/starter/EmulatorRunner.java:4: error: package main.java.ch.qc.starter does not exist
+import main.java.ch.qc.starter.MySmartBot;
+                              ^
+1 error
+
+[Incubating] Problems report is available at: file:///home/akshatgg/CERN_bot_connect4/starter-bot-project/build/reports/problems/problems-report.html
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileJava'.
+> Compilation failed; see the compiler output below.
+  /home/akshatgg/CERN_bot_connect4/starter-bot-project/src/main/java/ch/qc/starter/EmulatorRunner.java:4: error: package main.java.ch.qc.starter does not exist
+  import main.java.ch.qc.starter.MySmartBot;
+                                ^
+  1 error
+
+* Try:
+> Check your code and dependencies to fix the compilation error(s)
+> Run with --scan to get full insights.
+
+BUILD FAILED in 1s
+2 actionable tasks: 2 executed

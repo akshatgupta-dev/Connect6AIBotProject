@@ -1,0 +1,31 @@
+plugins {
+    id 'java'
+}
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation "ch.qos.logback:logback-classic:1.5.18"
+    implementation fileTree(dir: 'libs')
+}
+
+jar {
+    from sourceSets.main.output
+    dependsOn configurations.runtimeClasspath
+    from {
+        configurations.runtimeClasspath.findAll { it.name.endsWith('jar') }
+                            .collect { zipTree(it) }
+    }
+    manifest {
+        attributes(
+            'Main-Class': 'ch.qc.starter.EmulatorRunner',
+            'Bot-Class': 'ch.qc.starter.QuantumStrategistBot'        
+            )
+    }
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+}
